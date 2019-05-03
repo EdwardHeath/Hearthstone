@@ -37,7 +37,7 @@ class App extends React.Component {
         <ul>
           {cards.map(card => (
             <li key={card.cardId}>
-              <img src={card.img} alt={card.name} />
+              <Card cardInfo={card} />
             </li>
           ))}
         </ul>

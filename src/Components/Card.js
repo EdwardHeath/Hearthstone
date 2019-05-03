@@ -1,9 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-class Card extends React.Component {
-  render() {
-    return <div>Hello</div>;
-  }
+function Card(props) {
+  const { img, name } = props.cardInfo;
+  console.log(props);
+  return <div className="card-container">{name}</div>;
 }
+
+Card.propTypes = {
+  img: PropTypes.string,
+  name: PropTypes.string,
+};
 
 export default Card;
